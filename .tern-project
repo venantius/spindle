@@ -1,0 +1,13 @@
+{
+  "libs": [
+    "express",
+    "pug",
+    "sequelize"
+  ],
+  "loadEagerly": [
+    "bin/www"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}
