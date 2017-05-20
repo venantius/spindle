@@ -8,7 +8,7 @@ var sequelizeInit = function() {
     updatedAt: 'updated_at',
     deletedAt: 'deleted_at',
   }
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'test') {
     db = new Sequelize(process.env.DATABASE_URL, {
       define: defineOpts,
     })
