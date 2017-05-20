@@ -20,10 +20,16 @@ var sequelizeInit = function() {
       }
     )
   }
-  console.log('finished initializing Sequelize connection pool!');
+  db.authenticate()
+    .then(err => {
+      console.log('Successfully initialized Sequelize connection pool!');
+    })
+    .catch(err => {
+      console.log('Unable to connect to the database:', err);
+    });
   return db;
 };
 
-var sequelize = sequelizeInit();
+const sequelize = sequelizeInit();
 
 module.exports = sequelize;
