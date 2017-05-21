@@ -1,8 +1,9 @@
 const User = require('../models/users.js');
+const Sequelize = require('sequelize');
 const db = require('../db');
 
-beforeEach(() => {
-  return User.sync({force: true});
+beforeAll(() => {
+  return User.sync({force: true})
 });
 
 afterAll(() => {
@@ -25,4 +26,3 @@ test('Created user has hashed password', done => {
     done.fail();
   });
 });
-

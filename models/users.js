@@ -12,6 +12,7 @@ var generateHash = function(password) {
     }).then(function(hash) {
       resolve(hash);
     }).catch(function(err) {
+      console.error(err);
       reject(err);
     });
   });
@@ -35,6 +36,7 @@ const User = db.define('user', {
         bcrypt.compare(password, user.password).then(function(result) {
           resolve(result);
         }).catch(function(err) {
+          console.err(err);
           reject(err);
         });
       });
@@ -50,7 +52,5 @@ User.beforeCreate(function(user, options, cb) {
     return cb(err, options);
   });
 });
-
-User.sync();
 
 module.exports = User;
