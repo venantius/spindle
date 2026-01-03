@@ -10,11 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
-    "body-parser": "~1.17.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "~1.20.4",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
-    "express": "~4.15.2",
+    "express": "~4.22.0",
     "less-middleware": "~2.2.0",
     "morgan": "~1.8.1",
     "pg": "^6.2.2",
